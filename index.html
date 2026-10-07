@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <title>M’ma Tundé — Restaurant</title>
+  <meta name="description" content="M’ma Tundé — Restaurant à Lambagny, Conakry. Commandez vos plats, pizzas, chawarmas, burgers et sandwichs.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo">M’T</span><div><strong>M’ma Tundé</strong><small>Le goût qui vous rassemble !</small></div></div>
+  <button class="cart-btn" onclick="toggleCart()">🛒 <span id="cartCount">0</span></button>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <span class="eyebrow">🍽️ RESTAURANT • LAMBAGNY</span>
+    <h1>Le goût qui vous rassemble.</h1>
+    <p>Des plats généreux, des pizzas, chawarmas, burgers et sandwichs préparés avec soin.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn primary">Voir le menu</a>
+      <a href="https://wa.me/224611333371" class="btn ghost">Commander sur WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="quick">
+  <div><b>📍</b><span>Lambagny<br><small>Conakry</small></span></div>
+  <div><b>🛵</b><span>Livraison<br><small>Conakry</small></span></div>
+  <div><b>📞</b><span>611 333 371<br><small>Commandes</small></span></div>
+</section>
+
+<section class="section" id="menu">
+  <div class="section-head">
+    <div><span class="eyebrow">NOTRE CARTE</span><h2>Choisissez votre envie</h2></div>
+  </div>
+  <div class="filters" id="filters"></div>
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+
+<section class="promo">
+  <div>
+    <span class="eyebrow">OFFRE DU MOMENT</span>
+    <h2>Chawarma + Bissap ou Gingembre</h2>
+    <p>Une formule simple, généreuse et savoureuse.</p>
+  </div>
+  <strong>40 000 GNF</strong>
+</section>
+
+<section class="about">
+  <div>
+    <span class="eyebrow">M’MA TUNDÉ</span>
+    <h2>Votre pause gourmande à Conakry</h2>
+    <p>Que ce soit pour le petit-déjeuner, le déjeuner, le dîner ou une petite faim, M’ma Tundé vous accueille avec une carte variée et des commandes faciles par WhatsApp.</p>
+  </div>
+  <div class="about-card">
+    <b>📍 Lambagny</b>
+    <span>Conakry, Guinée</span>
+    <a href="https://wa.me/224611333371">💬 Nous écrire</a>
+  </div>
+</section>
+
+<footer>
+  <div class="brand"><span class="logo">M’T</span><div><strong>M’ma Tundé</strong><small>Le goût qui vous rassemble !</small></div></div>
+  <p>© 2026 M’ma Tundé — Tous droits réservés.</p>
+</footer>
+
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+<aside class="cart" id="cart">
+  <div class="cart-head"><h2>Votre commande</h2><button onclick="toggleCart()">✕</button></div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-total"><span>Total</span><strong id="cartTotal">0 GNF</strong></div>
+  <div class="delivery">
+    <label>Nom<input id="customerName" placeholder="Votre nom"></label>
+    <label>Quartier / adresse<input id="customerAddress" placeholder="Ex. Lambagny"></label>
+    <label>Livraison
+      <select id="deliveryFee">
+        <option value="0">Retrait au restaurant — 0 GNF</option>
+        <option value="10000">Livraison — 10 000 GNF</option>
+        <option value="15000">Livraison — 15 000 GNF</option>
+        <option value="20000">Livraison — 20 000 GNF</option>
+      </select>
+    </label>
+  </div>
+  <button class="btn primary full" onclick="orderWhatsApp()">Commander sur WhatsApp</button>
+</aside>
+
+<script src="scripts.js"></script>
+</body>
+</html>
